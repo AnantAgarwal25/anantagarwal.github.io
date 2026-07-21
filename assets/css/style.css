@@ -484,13 +484,63 @@ section h2{
 
 footer{
 
-    background:#08172b;
+background:#08172b;
 
-    color:white;
+color:white;
 
-    text-align:center;
+padding:60px 20px;
 
-    padding:35px;
+text-align:center;
+
+}
+
+.footer-links{
+
+margin:25px 0;
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-links a{
+
+color:white;
+
+transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+color:#7db7ff;
+
+}
+
+footer h2{
+
+margin-bottom:15px;
+
+}
+
+footer p{
+
+color:#d1d5db;
+
+}
+
+.copyright{
+
+margin-top:30px;
+
+font-size:14px;
+
+opacity:.8;
 
 }
 
@@ -876,5 +926,17 @@ font-size:22px;
 line-height:1.8;
 
 color:#555;
+
+}
+
+.card p{
+
+margin-top:18px;
+
+color:#666;
+
+line-height:1.7;
+
+font-size:16px;
 
 }
