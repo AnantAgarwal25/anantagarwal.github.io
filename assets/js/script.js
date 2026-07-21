@@ -1,32 +1,92 @@
-// ==============================
-// Sticky Navbar Shadow on Scroll
-// ==============================
+// Sticky Navbar
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll",()=>{
 
-    const header = document.querySelector("header");
+const header=document.querySelector("header");
 
-    if(window.scrollY > 40){
+if(window.scrollY>40){
 
-        header.style.boxShadow = "0 10px 25px rgba(0,0,0,.08)";
+header.style.boxShadow="0 12px 25px rgba(0,0,0,.08)";
 
-    }
+}
 
-    else{
+else{
 
-        header.style.boxShadow = "none";
+header.style.boxShadow="none";
 
-    }
+}
 
 });
 
 
-// ==============================
-// Smooth Fade-In (placeholder)
-// ==============================
+// =========================
+// Typing Animation
+// =========================
 
-document.addEventListener("DOMContentLoaded",()=>{
+const words=[
 
-    document.body.style.opacity="1";
+"PhD Research Scholar",
 
-});
+"AI for Wireless Communications",
+
+"6G Researcher",
+
+"Integrated Sensing & Communication",
+
+"Vehicular Networks",
+
+"Machine Learning",
+
+"LiFi & VLC Research"
+
+];
+
+let wordIndex=0;
+
+let charIndex=0;
+
+let deleting=false;
+
+const typing=document.getElementById("typing");
+
+function type(){
+
+if(!typing) return;
+
+const current=words[wordIndex];
+
+if(!deleting){
+
+typing.textContent=current.substring(0,charIndex++);
+
+if(charIndex>current.length){
+
+deleting=true;
+
+setTimeout(type,1500);
+
+return;
+
+}
+
+}
+
+else{
+
+typing.textContent=current.substring(0,charIndex--);
+
+if(charIndex<0){
+
+deleting=false;
+
+wordIndex=(wordIndex+1)%words.length;
+
+}
+
+}
+
+setTimeout(type,deleting?40:90);
+
+}
+
+type();
