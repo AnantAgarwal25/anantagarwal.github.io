@@ -126,3 +126,51 @@ toggle.innerHTML='<i class="fas fa-moon"></i>';
 }
 
 });
+
+// =====================
+// Counter Animation
+// =====================
+
+const counters=document.querySelectorAll(".counter");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+const counter=entry.target;
+
+const target=+counter.dataset.target;
+
+let count=0;
+
+const update=()=>{
+
+count+=Math.ceil(target/80);
+
+if(count<target){
+
+counter.innerText=count;
+
+requestAnimationFrame(update);
+
+}
+
+else{
+
+counter.innerText=target+"+";
+
+}
+
+};
+
+update();
+
+}
+
+});
+
+});
+
+counters.forEach(c=>observer.observe(c));
