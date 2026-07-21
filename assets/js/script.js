@@ -23,73 +23,73 @@ header.style.boxShadow="none";
 // Typing Animation
 // =========================
 
-const words=[
+// const words=[
 
-"PhD Research Scholar",
+// "PhD Research Scholar",
 
-"AI for Wireless Communications",
+// "AI for Wireless Communications",
 
-"6G Researcher",
+// "6G Researcher",
 
-"Integrated Sensing & Communication",
+// "Integrated Sensing & Communication",
 
-"Vehicular Networks",
+// "Vehicular Networks",
 
-"Machine Learning",
+// "Machine Learning",
 
-"LiFi & VLC Research"
+// "LiFi & VLC Research"
 
-];
+// ];
 
-let wordIndex=0;
+// let wordIndex=0;
 
-let charIndex=0;
+// let charIndex=0;
 
-let deleting=false;
+// let deleting=false;
 
-const typing=document.getElementById("typing");
+// const typing=document.getElementById("typing");
 
-function type(){
+// function type(){
 
-if(!typing) return;
+// if(!typing) return;
 
-const current=words[wordIndex];
+// const current=words[wordIndex];
 
-if(!deleting){
+// if(!deleting){
 
-typing.textContent=current.substring(0,charIndex++);
+// typing.textContent=current.substring(0,charIndex++);
 
-if(charIndex>current.length){
+// if(charIndex>current.length){
 
-deleting=true;
+// deleting=true;
 
-setTimeout(type,1500);
+// setTimeout(type,1500);
 
-return;
+// return;
 
-}
+// }
 
-}
+// }
 
-else{
+// else{
 
-typing.textContent=current.substring(0,charIndex--);
+// typing.textContent=current.substring(0,charIndex--);
 
-if(charIndex<0){
+// if(charIndex<0){
 
-deleting=false;
+// deleting=false;
 
-wordIndex=(wordIndex+1)%words.length;
+// wordIndex=(wordIndex+1)%words.length;
 
-}
+// }
 
-}
+// }
 
-setTimeout(type,deleting?40:90);
+// setTimeout(type,deleting?40:90);
 
-}
+// }
 
-type();
+// type();
 
 // =========================
 // Dark Mode
