@@ -596,6 +596,20 @@ display:block;
    
 }
 
+.hero h3{
+
+margin-top:10px;
+
+font-size:24px;
+
+font-weight:500;
+
+color:#555;
+
+line-height:1.5;
+
+}
+
 /* @keyframes rotateGlow{
 
 0%{
