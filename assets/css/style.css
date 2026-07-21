@@ -818,3 +818,63 @@ color:#0057ff;
 letter-spacing:.5px;
 
 }
+
+/* ===================================
+Quick Information Cards
+=================================== */
+
+.quick-info{
+
+max-width:1200px;
+
+margin:40px auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+padding:0 40px;
+
+}
+
+.info-card{
+
+background:white;
+
+padding:35px;
+
+border-radius:15px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+transition:.3s;
+
+border-top:4px solid #0057ff;
+
+}
+
+.info-card:hover{
+
+transform:translateY(-6px);
+
+}
+
+.info-card h3{
+
+margin-bottom:15px;
+
+color:#0B1F3A;
+
+font-size:22px;
+
+}
+
+.info-card p{
+
+line-height:1.8;
+
+color:#555;
+
+}
