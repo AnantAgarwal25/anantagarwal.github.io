@@ -493,3 +493,105 @@ footer{
     padding:35px;
 
 }
+
+/* ===============================
+Hero Improvements
+=============================== */
+
+.hero{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+width:700px;
+
+height:700px;
+
+right:-200px;
+
+top:-180px;
+
+background:linear-gradient(135deg,#dfefff,#eef5ff);
+
+border-radius:50%;
+
+z-index:-1;
+
+}
+
+.badge{
+
+display:inline-block;
+
+padding:10px 22px;
+
+border-radius:40px;
+
+background:#eef4ff;
+
+color:#0057ff;
+
+font-weight:600;
+
+margin-bottom:30px;
+
+}
+
+.gradient-text{
+
+background:linear-gradient(90deg,#0057ff,#00b8ff);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+.profile-wrapper{
+
+display:inline-block;
+
+padding:8px;
+
+border-radius:50%;
+
+background:linear-gradient(135deg,#0057ff,#00d4ff);
+
+animation:rotateGlow 8s linear infinite;
+
+}
+
+.profile-wrapper img{
+
+width:380px;
+
+border-radius:50%;
+
+border:8px solid white;
+
+}
+
+@keyframes rotateGlow{
+
+0%{
+
+transform:rotate(0deg);
+
+}
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
