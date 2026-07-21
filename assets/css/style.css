@@ -564,9 +564,23 @@ padding:8px;
 
 border-radius:50%;
 
-background:linear-gradient(135deg,#0057ff,#00d4ff);
+background:linear-gradient(135deg,#0057ff,#00b8ff);
 
-animation:rotateGlow 8s linear infinite;
+/* animation:rotateGlow 8s linear infinite; */
+
+box-shadow:
+0 15px 40px rgba(0,87,255,.25);
+
+transition:.35s ease;
+   
+}
+
+.profile-wrapper:hover{
+
+transform:translateY(-6px);
+
+box-shadow:
+0 25px 55px rgba(0,87,255,.35);
 
 }
 
@@ -578,9 +592,11 @@ border-radius:50%;
 
 border:8px solid white;
 
+display:block;
+   
 }
 
-@keyframes rotateGlow{
+/* @keyframes rotateGlow{
 
 0%{
 
@@ -594,7 +610,7 @@ transform:rotate(360deg);
 
 }
 
-}
+} */
 
 /* ==================================
 Dark Mode Toggle
@@ -739,7 +755,7 @@ transform:translateY(-4px);
 
 }
 
-.research-tags{
+/* .research-tags{
 
 display:flex;
 
@@ -772,5 +788,19 @@ body.dark .research-tags span{
 background:#1e293b;
 
 color:#7dd3fc;
+
+} */
+
+.research-focus{
+
+margin-top:25px;
+
+font-size:18px;
+
+font-weight:500;
+
+color:#0057ff;
+
+letter-spacing:.5px;
 
 }
