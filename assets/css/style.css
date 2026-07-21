@@ -738,3 +738,39 @@ z-index:999;
 transform:translateY(-4px);
 
 }
+
+.research-tags{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:12px;
+
+margin:35px 0;
+
+}
+
+.research-tags span{
+
+padding:10px 18px;
+
+background:#eef4ff;
+
+border-radius:30px;
+
+font-size:14px;
+
+font-weight:600;
+
+color:#0057ff;
+
+}
+
+body.dark .research-tags span{
+
+background:#1e293b;
+
+color:#7dd3fc;
+
+}
